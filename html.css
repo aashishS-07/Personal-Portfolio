@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashish Kumar Sharma | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">Ashish Kumar Sharma</a>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Ashish Kumar Sharma</h1>
+                <p class="subtitle">I'm a <span class="auto-type"></span></p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/ashish-kumar-sharma-424477226" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/aashishS-07" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <h2>About Me</h2>
+            <p>Technically inclined and detail-oriented, I enjoy building, fixing, and understanding how systems work. Known for handling challenges calmly, solving problems efficiently, and ensuring stable, reliable project execution.</p>
+        </section>
+
+        <section id="experience" class="content-section">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Technical Operations Manager</h3>
+                <p class="company-info">Protrainy Skilled Learning Pvt. Ltd. | Apr 2023 - Jun 2025</p>
+                <ul>
+                    <li>Managed end-to-end technical operations of training programs.</li>
+                    <li>Led a team, streamlined processes, and oversaw IT systems and tools.</li>
+                    <li>Assisted in designing and developing Protrainy's official website.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Operations Intern</h3>
+                <p class="company-info">Protrainy Skilled Learning Pvt. Ltd. | Dec 2022 - Mar 2023</p>
+                <ul>
+                    <li>Assisted in daily operations of technical training programs.</li>
+                    <li>Coordinated sessions, supported documentation, and helped troubleshoot.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects" class="content-section">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Emotion from Text</h3>
+                    <p>Developed a tool to classify emotions from text input using NLP techniques.</p>
+                    <div class="tools">Tools: Python, NLTK, Scikit-learn</div>
+                    <a href="https://github.com/aashishS-07" target="_blank" class="project-link">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Cafe Management System</h3>
+                    <p>Built a system to manage cafe orders, billing, and inventory efficiently.</p>
+                    <div class="tools">Tools: Python, MySQL</div>
+                    <a href="https://github.com/aashishS-07" target="_blank" class="project-link">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>Designed a responsive digital portfolio showcasing projects and technical skills.</p>
+                    <div class="tools">Tools: HTML, CSS, JavaScript</div>
+                    <a href="https://github.com/aashishS-07" target="_blank" class="project-link">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="content-section">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h4>Languages</h4>
+                    <div class="skill-tags">
+                        <span>C/C++</span><span>Python</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Web & Dev Tools</h4>
+                    <div class="skill-tags">
+                        <span>VS Code</span><span>Visual Studio</span><span>Git</span><span>GitHub</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Database</h4>
+                    <div class="skill-tags">
+                        <span>MySQL</span><span>SQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="education" class="content-section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Master of Computer Applications (MCA)</h3>
+                <p>Sage University, Bhopal (Expected: Aug 2025 - Jul 2027)</p>
+            </div>
+            <div class="education-item">
+                <h3>Bachelor of Computer Applications (BCA)</h3>
+                <p>Integral University, Lucknow (Nov 2021 - Jun 2024)</p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out!</p>
+        <p><strong>Email:</strong> <a href="mailto:sharmaaashishkumar7@gmail.com">sharmaaashishkumar7@gmail.com</a></p>
+        <p><strong>Phone:</strong> +91 9905875266</p>
+        <div class="footer-social-links">
+            <a href="https://linkedin.com/in/ashish-kumar-sharma-424477226" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/aashishS-07" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+        <p class="copyright">&copy; 2025 Ashish Kumar Sharma. All rights reserved.</p>
+    </footer>
+
+    <a href="#" class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

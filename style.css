@@ -1,0 +1,367 @@
+/* ==========================================================================
+   TABLE OF CONTENTS
+   ==========================================================================
+   1.  VARIABLES & GLOBAL STYLES
+   2.  HEADER & NAVIGATION
+   3.  HERO SECTION
+   4.  GENERAL CONTENT SECTIONS
+   5.  EXPERIENCE & EDUCATION
+   6.  PROJECTS
+   7.  SKILLS
+   8.  FOOTER
+   9.  DYNAMIC & INTERACTIVE ELEMENTS (New!)
+   10. RESPONSIVE DESIGN (Media Queries - New!)
+   ========================================================================== */
+
+/* ==========================================================================
+   1. VARIABLES & GLOBAL STYLES
+   ========================================================================== */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #343a40;
+    --background-color: #f8f9fa;
+    --card-background: #ffffff;
+    --text-muted: #6c757d;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
+header {
+    background-color: var(--card-background);
+    padding: 1rem 5%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 500;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+nav a:hover {
+    color: var(--primary-color);
+}
+/* Style for the currently active navigation link */
+.nav-links a.nav-active {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+/* Hamburger menu icon is hidden by default on larger screens */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   3. HERO SECTION
+   ========================================================================== */
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh; /* Use min-height for better flexibility */
+    background-color: var(--card-background);
+    padding: 0 5%;
+}
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+#hero .subtitle {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    height: 40px; /* Give it a fixed height to prevent layout shifts */
+}
+/* Style for the typing cursor from Typed.js */
+.typed-cursor {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+#hero .social-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.5rem; /* Larger icons */
+    margin: 0 0.75rem;
+    transition: transform 0.3s ease;
+}
+#hero .social-links a:hover {
+    transform: scale(1.2); /* Grow effect on hover */
+}
+
+/* ==========================================================================
+   4. GENERAL CONTENT SECTIONS
+   ========================================================================== */
+.content-section {
+    padding: 5rem 10%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.content-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.content-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative; /* Needed for the underline pseudo-element */
+}
+/* A more modern underline effect */
+.content-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 0.5rem auto 0;
+}
+
+/* ==========================================================================
+   5. EXPERIENCE & EDUCATION
+   ========================================================================== */
+.experience-item, .education-item {
+    margin-bottom: 2rem;
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-left: 5px solid var(--primary-color); /* Accent border */
+}
+.experience-item h3, .education-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+.experience-item .company-info, .education-item p {
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+.experience-item ul {
+    list-style-position: inside;
+    padding-left: 1rem; /* Indent list items */
+}
+
+/* ==========================================================================
+   6. PROJECTS
+   ========================================================================== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.project-card {
+    background: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.project-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+.project-card .tools {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 1rem 0;
+}
+.project-card .project-link {
+    margin-top: auto;
+    text-align: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    padding: 0.75rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.project-card .project-link:hover {
+    background-color: var(--primary-color);
+    color: var(--card-background);
+}
+
+/* ==========================================================================
+   7. SKILLS
+   ========================================================================== */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    text-align: center;
+}
+.skill-category h4 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+}
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+}
+.skill-tags span {
+    background-color: #e9ecef; /* Lighter background for skills */
+    color: var(--secondary-color);
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   8. FOOTER
+   ========================================================================== */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 3rem 5%;
+}
+footer a {
+    color: white; /* Make links white on dark background */
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+.footer-social-links {
+    margin: 1rem 0 2rem;
+}
+footer .footer-social-links a {
+    margin: 0 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.copyright {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #adb5bd;
+}
+
+/* ==========================================================================
+   9. DYNAMIC & INTERACTIVE ELEMENTS (New!)
+   ========================================================================== */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    /* Hidden by default, made visible with JS */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+/* Class added by JS to show the button */
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   10. RESPONSIVE DESIGN (Media Queries - New!)
+   ========================================================================== */
+
+/* This applies styles for screens 768px wide or smaller (tablets and phones) */
+@media (max-width: 768px) {
+    /* Adjust font sizes for smaller screens */
+    #hero h1 {
+        font-size: 2.2rem;
+    }
+    .content-section h2 {
+        font-size: 2rem;
+    }
+
+    /* Make the navigation links a vertical list */
+    nav .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: var(--card-background);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+        /* Hide the menu off-screen to the right */
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    /* This class will be added by JS to show the mobile menu */
+    nav .nav-links.active {
+        transform: translateX(0);
+    }
+    
+    /* Show the hamburger icon */
+    .hamburger {
+        display: block;
+        z-index: 1001; /* Ensure it's above the nav panel */
+    }
+
+    /* Style for the 'X' close icon when menu is active */
+    .hamburger.active i::before {
+        content: '\f00d'; /* Font Awesome 'times' (X) icon */
+    }
+}
