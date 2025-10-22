@@ -6,8 +6,7 @@ A clean and responsive personal portfolio website built using HTML, CSS, and Jav
 
 ### ✨ Live Demo
 
-You can view the live version of my portfolio here: [Link to your live site] *(We'll generate this link in the next step!)*
-
+You can view the live version of my portfolio here:https://aashishs-07.github.io/Personal-Portfolio/ 
 ---
 
 ### 📸 Screenshot
